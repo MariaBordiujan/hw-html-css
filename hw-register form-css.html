@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form Example + CSS</title>
+</head>
+
+<body style="
+            background-color: OldLace;
+            font-family: Georgia;
+            ">
+
+    <form action="thankyou.html">
+
+        <h1 align="center"
+            style="background-color: Peru;
+                   color: white;
+                   padding: 10px;
+                   border: 3px solid #a2662a;
+                  ">
+            Apply for TRAINING
+        </h1>
+
+        <fieldset style="
+                        background-color: #e5bf9a;
+                        color: #65401a;
+                        padding: 13px;
+                        border: 3px solid #a2662a;
+                        ">
+        <table>
+            <tr>
+                <td>
+                    Your name: 
+                </td>  
+                <td>  
+                    <input type="text" required>
+                </td>    
+            </tr>
+            <tr>
+                <td>
+                    Your email:
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone number:
+                </td>
+                <td>
+                    <input type="text" required>
+                </td>
+            </tr>
+        </table>
+        </fieldset>
+
+        <br/>
+
+        <fieldset style="
+                        background-color: #e5bf9a;
+                        color: #65401a;
+                        padding: 13px;
+                        border: 3px solid #a2662a;
+                        ">
+        <table>
+            <tr>
+                <td>
+                    Choose course: 
+                </td>
+                <td>
+                    <select>
+                    <option>HTML Basic Training</option>
+                    <option>CSS Basic Training</option>
+                    </select>
+                </td>   
+            </tr>
+            <tr>
+                <td>
+                    Choose hourse: 
+                </td>
+                <td>
+                    <select>
+                    <optgroup label="Morning">
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    </optgroup>
+                    <optgroup label="Evening">
+                    <option>19:00</option>
+                    <option>20:00</option>
+                    </optgroup>
+                    </select>
+                </td>
+            </tr>    
+        </table>
+        </fieldset>
+
+        <br/>
+        <input type="checkbox" required>
+                                    I accept the 
+                                    <a href="terms.html" 
+                                       target="_blank"
+                                       style="
+                                             color: #65401a;
+                                             ">
+                                    terms and conditions</a>.
+        <br/>
+        <br/>
+
+        <div style="
+                    text-align:center;
+                   ">
+        <button style="
+                      width: 25%;
+                      font-size: 20px;
+                      background-color: #a2662a;
+                      color: white;
+                      padding: 10px;
+                      border: none;
+                      cursor: pointer;
+                      ">
+            Apply
+        </button>
+        </div>  
+
+    </form>
+
+</body>
+</html>
