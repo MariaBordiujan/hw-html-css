@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SKI TRAVEL Ad</title>
+    <style>
+        html {
+            width: 100%;
+        }
+        body {
+            background-color: #2a4661;
+            color: white;
+            margin: 0;
+            width: 100%;
+
+            overflow: hidden;
+        }
+        .ad {
+            margin: 5% 10%;
+            font-family: Arial;
+        }
+        .ad h1 {
+            margin-bottom: 1%;
+        }
+        .ad h2 {
+            margin-top: 1%;
+            margin-bottom: 5%;
+        }
+        .ad h3 {
+            margin-bottom: 5%;
+        }
+        .ad img {
+            float: right;
+            animation: ski-jump 1.5s;
+        }
+        .ad p {
+            width: 50%;
+        }
+        .ad div {
+            margin-top: 25%;
+        }
+        .ad a {
+            text-decoration: none;
+            padding: 2% 5%;
+            font-weight: bold;
+            border-radius: 100px;
+            box-shadow: 0 0 9px 1px black;
+/* HW */    float: right;
+            background: linear-gradient(
+                rgb(0, 166, 255),
+                rgb(200, 247, 255),
+                rgb(0, 166, 255)
+            );
+        }
+        .ad a:hover {
+            background: linear-gradient(
+                rgb(0, 139, 214),
+                rgb(200, 247, 255),
+                rgb(0, 139, 214)
+            );
+            color: #333;
+        }
+
+        @keyframes ski-jump {
+            from {
+                transform: translateX(150%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="ad">
+        <h1>The Best Winter <span>SKI</span> Tour</h1>
+        <h2>We'll get you there fast...<h2>
+
+        <h3><small>from</small> SKI TRAVEL ltd.</h3>
+        <img src="images/fig5.png" alt="ski guy">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam autem nisi est placeat? Officia fugit a omnis cum quae eos voluptatem nemo. Cumque ad numquam minus amet deserunt doloribus voluptate reiciendis distinctio excepturi qui. Iusto odio molestias magnam provident itaque labore culpa at atque vitae rem! Possimus, eum optio!
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid autem veniam voluptates, voluptatem omnis et quaerat distinctio odit neque.
+        </p>
+
+        <div>
+            <a href="">APPLY NOW</a>
+        </div>    
+    
+    </header>
+</body>
+</html>

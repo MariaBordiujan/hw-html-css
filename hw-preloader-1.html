@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preloader | CSS</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+        }
+        .preloader {
+            margin-top: 50px;
+        }
+        .preloader div {
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+            margin-bottom: 15px;
+            color: transparent;
+        }
+        .preloader div:first-child {
+            animation: jump 1s 10 alternate;
+        }
+        .preloader div:nth-child(2) {
+            animation: jump 1s 10 alternate;
+            animation-delay: 0.3s;
+        }
+        .preloader div:nth-child(3) {
+            animation: jump 1s 10 alternate;
+            animation-delay: 0.6s;
+        }
+        .preloader div:nth-child(4) {
+            animation: jump 1s 10 alternate;
+            animation-delay: 0.9s;
+        }
+        .preloader div:last-child {
+            animation: jump 1s 10 alternate;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes jump {
+            from {
+                transform: translateX(0);
+                background-color: orange;
+            }
+            to {
+                transform: translateX(50px);
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body> 
+
+    <h1>Pure CSS Preloader</h1>
+<!-- 
+    HW1: Изначально высота div зависит от содержимого в ней контента. 
+    В данном примере каждый .preloader div имеет высоту одной строки.
+    Соотвественно, .preloader имеет высоту в 5 строк. 
+ -->
+    <div class="preloader">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+</body>
+</html>
