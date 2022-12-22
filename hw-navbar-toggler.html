@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar Toggler | CSS Pseudo Selectors</title>
+    <style>
+        body {
+            background-color: #284167;
+            font-family: Helvetica;
+            margin: 0;
+        }
+        .toggler-bgc {
+            background-color: #17234E;
+            height: 70px;
+            padding-top: 10px;
+        }
+        .toggler {
+            background-color: #df3f39;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            padding: 0;
+            border-radius: 30px;
+            margin-left: 25px;
+            transition: 0.2s;
+        }
+        .toggler::before {
+            content: none;
+        }
+        .toggler:hover {
+            background-color: #c63631;
+        }
+        .menu {
+            transition: 0.7s;
+            margin-left: -300px;
+        }
+        .menu:target {
+            margin-left: 0px;
+            background-color: #17234E;
+        }
+        .menu-title {
+            margin: 0;
+            color: white;
+            padding: 5px 10px;
+        }
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(233, 242, 255);
+            padding: 5px 10px;
+            display: block;
+            border-bottom: 1px solid #345;
+        }
+        li:first-child { 
+            border-top: 1px solid #345;
+        }
+        a:hover {
+            color: white;
+            background-color: #222d57;
+        }
+        a::before {
+            content: "✔";
+            color: rgb(39, 165, 39);
+            padding-right: 10px;
+        }
+        .not-available::before {
+            content: "✘";
+            color: #df3f39;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="toggler-bgc"><a class="toggler" href="#navbar">MENU</a></div>
+
+    <nav class="menu" id="navbar">
+
+        <h2 class="menu-title">Our Cuisine </h2>
+        
+        <ul class="menu-list">
+            
+            <li><a href="#">Kobe Beef and Maine Lobster Burger</a></li>
+            <li><a href="#">The Zillion Dollar Lobster Frittata</a></li>
+            <li><a href="#">Louis XIII Pizza</a></li>
+            <li><a class="not-available" href="#">Grand Velas Los Cabos Taco</a></li>
+            <li><a href="#">Golden Opulence Sundae</a></li>
+            
+        </ul>
+    </nav>
+    
+</body>
+</html>
