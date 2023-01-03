@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(10,15,43);
+    color: white;
+    margin: 0;
+}
+.timeline {
+    font-family: Arial;
+}
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline p,
+.timeline time {
+    margin: 0;
+}
+.timeline ol {
+    list-style: none;
+    padding: 0;
+
+    margin: 0;
+    margin-left: 50%;
+
+    border-left: 3px solid white;
+}
+.timeline h1 {
+    text-align: center;
+    padding: 3%;
+    color: white;
+}
+.timeline h2 {
+    color: rgb(2,214,100);
+}
+.timeline li {
+    opacity: 0.75;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.timeline li:hover {
+    opacity: 1;
+}
+
+
+.timeline time {                                             /* HW2 */
+    opacity: 0;
+    transition: 0.5s;                                     
+}
+.timeline time::before {                                    
+    content: "📅";
+}
+.timeline li:hover time {
+    opacity: 1;
+}
+
+
+.timeline li:nth-child(odd) {
+    text-align: right;
+    transform: translateX(-106%);
+
+    margin-bottom: -20%;
+    padding: 5%;
+}
+.timeline li:nth-child(even) {
+    padding: 5%;
+}
+.timeline li:nth-child(even)::before {
+    content: "○";
+    font-size: 300%;
+    color: white;
+    transform: translateX(-163%) translateY(70%);
+    display: inline-block;
+}
+
+
+.timeline li:nth-child(odd)::after {                         /* HW1 */ 
+    content: "○";
+    font-size: 300%;
+    color: white;
+
+    transform: translateX(284%) translateY(-195%);
+    display: inline-block;
+}
+
+
+.timeline li:nth-child(even) h3,
+.timeline li:nth-child(even) p {
+    padding-left: 7%;
+}
+.timeline li:nth-child(odd) h3,
+.timeline li:nth-child(odd) p {
+    padding-right: 7%;
+}
