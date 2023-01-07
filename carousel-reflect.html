@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel with Reflection</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+        .carousel {
+            width: 800px;
+            height: 600px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .carousel .track {
+            width: 2500px;
+            animation: slide 10s linear infinite;
+        }
+        .carousel .slide {
+            display: inline-block;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .carousel .slide img {
+            display: block;
+        }
+        .carousel .slide .reflection {
+            width: 600px;
+            height: 200px;
+
+            background-size: 100% 100%;
+            transform: scaleY(-1);
+            margin-top: 5px;
+            filter: blur(10px);
+        }
+        .carousel .slide:nth-child(1) .reflection {
+            background-image: 
+            linear-gradient(#222, rgba(34, 34, 34, 0.395)),
+            url(https://cdn.lorem.space/images/shoes/.cache/600x400/usama-akram-kP6knT7tjn4-unsplash.jpg);
+        }
+        .carousel .slide:nth-child(2) .reflection {
+            background-image: 
+            linear-gradient(#222, rgba(34, 34, 34, 0.395)),
+            url(https://cdn.lorem.space/images/shoes/.cache/600x400/alex-motoc-xyjB6_ZDaKw-unsplash.jpg);
+        }
+        .carousel .slide:nth-child(3) .reflection {
+            background-image: 
+            linear-gradient(#222, rgba(34, 34, 34, 0.395)),
+            url(https://cdn.lorem.space/images/shoes/.cache/600x400/usama-akram-g3CMh2nqj_w-unsplash.jpg);
+        }
+
+        @keyframes slide {
+            0% {margin-left: 0;}
+            25% {margin-left: 0;}
+            33.33% {margin-left: -800px;}
+            58.33% {margin-left: -800px;}
+            66.66% {margin-left: -1600px;}
+            91.66% {margin-left: -1600px;}
+        }
+    </style>
+</head>
+<body>
+
+    <section class="carousel">
+        <div class="track">
+
+        <div class="slide">
+            <img src="https://cdn.lorem.space/images/shoes/.cache/600x400/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="slide-1">
+            <div class="reflection"></div>
+        </div>
+        <div class="slide">
+            <img src="https://cdn.lorem.space/images/shoes/.cache/600x400/alex-motoc-xyjB6_ZDaKw-unsplash.jpg" alt="slide-3">
+            <div class="reflection"></div>
+        </div>
+        <div class="slide">
+            <img src="https://cdn.lorem.space/images/shoes/.cache/600x400/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="slide-2">
+            <div class="reflection"></div>
+        </div>
+        
+        </div>
+    </section>
+    
+</body>
+</html>
