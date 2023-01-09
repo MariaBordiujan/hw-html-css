@@ -1,0 +1,40 @@
+body {
+    background-color: #222;
+}
+.preloader {
+    width: 200px;
+    height: 200px;
+}
+.preloader .lg {
+    border: 5px solid #999;
+    border-top-color: transparent;
+    border-radius: 105px;
+
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+
+    animation: rot 10s linear infinite;
+}
+.preloader .sm {
+    border: 5px solid Violet;
+    border-right-color: transparent;
+    border-radius: 85px;
+
+    width: 160px;
+    height: 160px;
+
+    margin-left: 15px;
+    margin-top: -185px;
+
+    animation: rot 10s linear infinite reverse;
+
+}
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
