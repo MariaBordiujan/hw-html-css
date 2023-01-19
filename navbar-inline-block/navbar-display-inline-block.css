@@ -1,0 +1,36 @@
+body {
+    background-color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.navbar {
+    background-color: #555;
+    text-align: right;
+    overflow: hidden;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.276);
+}
+.navbar li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px;
+}
+.navbar a {
+    color: white;
+    text-shadow: 1px 1px 3px #433e3e;
+}
+.navbar img {
+    transform: scaleX(-1);
+}
+.navbar a::after {
+    content: "";
+    display: block;
+    border-bottom: 1.5px solid transparent;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.navbar a:hover::after {
+    border-bottom-color: white;
+    transform: translateX(0%);
+}
