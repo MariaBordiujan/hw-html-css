@@ -1,0 +1,191 @@
+<!-- 
+    HW1 
+    Первый input под img, потому что они оба находятся в одной строке в таблице
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            color: #333;
+        }
+        .account {
+            border: 1px solid #999;
+            padding: 20px;
+        }
+        .heading {
+            border-bottom: 1px solid #bbb;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 150%;
+        }
+        .form table {
+            width: 100%;
+            table-layout: fixed;
+        }
+        .form table td:last-child {
+            width: 40%;
+        }
+        .form table .avatar {
+            width: 100%;
+            display: block;
+            transform: translateY(15%);
+        }
+        .form table input[type="text"],
+        .form table input[type="password"],
+        .form table label {
+            display: block;
+            width: 100%;
+            
+            padding: 20px;
+            font-size: 150%;
+
+            border: none;
+
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        .form table input {
+            border-bottom: 2px solid #bbb !important;
+        }
+        .form table input:focus::placeholder {
+            color: rgb(71,136,199);
+        }
+        .form table input:focus {
+            outline: none;
+            border-bottom-color: rgb(71,136,199) !important;
+        }
+        .form table span {
+            color: orangered;
+            visibility: hidden;
+            font-size: 90%;
+        }
+        .form table span::before {
+            content: "!";
+            font-size: 140%;
+            padding: 5px 17px;
+            border: 1px solid red;
+            display: inline-block;
+            border-radius: 100%;
+            margin-right: 10px;
+
+            animation: vibrate infinite 0.1s;
+            animation-direction: alternate;
+        }
+        .form table input:invalid + span {
+            visibility: visible;
+        }
+        .form table tr:nth-child(4) td:first-child{
+            color: #666;
+            font-size: 120%;
+        }
+        .form table button {
+            font-size: 150%;
+            font-weight: bold;
+            padding: 20px;
+            width: 100%;
+
+            background-color: rgb(71,136,199);
+            color: white;
+            transition: 0.2s;
+
+            border: none;
+            border-radius: 5px;
+        }
+        .form table button:hover {
+            background-color: rgb(51, 109, 167);
+            cursor: pointer;
+        }
+        @keyframes vibrate {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(2px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- services ad content -->
+    </header>
+
+    <section class="account">
+        <header class="heading">
+            <h1>CREATE ACCOUNT</h1>
+        </header>
+
+        <form class="form" action="/create-account">
+
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                        <input 
+                            type="text" 
+                            placeholder="Full Name"
+                            pattern="\w+ \w+">
+
+                            <span>2 words with space</span>
+
+                        </label>
+                    </td>
+                    <td rowspan="2">
+                        <img 
+                        src="avatar.png" 
+                        alt="avatarplaceholder"
+                        class="avatar">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                        <input 
+                            type="text" 
+                            placeholder="Username"
+                            pattern="\w{3,11}">
+
+                            <span>3 to 11 characters</span>
+
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                        <input 
+                            type="password"
+                            placeholder="Password"
+                            pattern=".{6,15}">
+
+                            <span>6 to 15 characters</span>
+
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                        <input 
+                            type="checkbox" 
+                            required> Agree with terms
+                        </label>
+                    </td>
+                    <td>
+                        <button>CREATE</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+        <footer></footer>
+
+    </section>
+
+</body>
+</html>
