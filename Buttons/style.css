@@ -1,0 +1,84 @@
+div {
+    margin-top: 1em;
+}
+.link {
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    background-color: #f0f0f0;
+
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.5em 0.25em;
+
+    font-size: 1.25em;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    margin: 0.5em;
+
+    border: 0.05em solid transparent;
+    border-radius: 2em;
+    cursor: pointer;
+
+    opacity: 0.85;
+    transition: 0.25s;
+}
+.link:hover {
+    opacity: 1;
+    transform: translateX(0.5em) translateY(0.5em);
+}
+.link::before {
+    content: "";
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: sub;
+}
+/* Icon Variants */
+.link-upload::before {
+    -webkit-mask-image: url(cloud.svg);
+}
+.link-account::before {
+    -webkit-mask-image: url(account.svg);
+}
+.link-rating::before {
+    -webkit-mask-image: url(thumb-up.svg);
+}
+.link-healthcare::before {
+    -webkit-mask-image: url(medical-bag.svg);
+}
+/* Color Variants */
+.link-standart {
+    border-color: #555;
+    color: #555;
+}
+.link-standart::before {
+    background-color: #555;
+}
+.link-info {
+    border-color: #0045A6;
+    color: #0045A6;
+}
+.link-info::before {
+    background-color: #0045A6;
+}
+.link-success {
+    border-color: green;
+    color: green;
+}
+.link-success::before {
+    background-color: green;
+}
+.link-danger {
+    border-color: #C60018;
+    color: #C60018;
+}
+.link-danger::before {
+    background-color: #C60018;
+}
+/* Size Variants */
+.link-big {
+    font-size: 1.75em;
+}
+.link-small {
+    font-size: 0.75em;
+}
