@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+.btn {
+    width: 60vmin;
+    margin-left: calc((100vw - 60vmin) / 2);
+
+    height: 60vmin;
+    margin-top: calc((100vh - 60vmin) / 2);
+
+    border-radius: 100%;
+    font-size: 10vmin;
+
+    background-image: radial-gradient( 
+    circle,
+    #ee5f13 15%, 
+    #f3770d, 
+    #f9a315, 
+    #fab823 95%
+    );
+    color: white;
+    border: 0.5vmin solid #f09527;
+    box-shadow: 0 0 2vmin 0vmin rgb(103, 101, 101);
+}
+.btn svg {
+    fill: white;
+    width: 6vw;
+    position: relative;
+    bottom: -0.25vw;
+}
+.btn span {
+    position: relative;
+    bottom: 0.75vw;
+}
+.btn:hover {
+    background-image: radial-gradient( 
+    circle,
+    #fe5900 15%, 
+    #ff7700, 
+    #ff9d00, 
+    #ffb300 95%
+    );
+    cursor: pointer;
+}
