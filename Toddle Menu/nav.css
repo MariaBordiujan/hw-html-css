@@ -1,0 +1,70 @@
+body {
+    --light-color: darkorange;
+    --dark-color: #444;
+    --text-color: white;
+}
+body {
+    background-color: var(--dark-color);
+}
+#bottom-menu {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    overflow: hidden;
+}
+#bottom-menu a {
+    background-color: var(--light-color);
+    display: block;
+    padding: 0.5em;
+    margin-bottom: 0.2em;
+    border-radius: 100%;
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.256), 0px -0.5px 0.5px rgba(0, 0, 0, 0.132);
+
+    transform: translateY(6.6em);
+    transition: 0.8s;
+}
+#bottom-menu:target a {
+    transform: translateY(0);
+}
+#bottom-menu li:last-child a {
+    margin-bottom: 0;
+}
+#bottom-menu li:first-child i {
+    transform: translateY(0.06em);
+}
+#bottom-menu li:nth-child(2) i {
+    transform: translateY(0.02em);
+}
+#bottom-menu li:last-child i {
+    transform: translateY(0.02em);
+}
+.wave {
+    width: 1.6em;
+    height: 1.6em;
+    background-color: transparent;
+    border: 0.1em solid var(--light-color);
+    border-radius: 100%;
+
+    position: absolute;
+    bottom: 2.21em;
+    right: 2.11em;
+    z-index: -1;
+
+    animation: wave-effect 6s infinite;
+}
+@keyframes wave-effect {
+    0% {
+        scale: 0;
+        opacity: 1;
+    }
+    33% {
+        scale: 2;
+        opacity: 0;
+    }
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
