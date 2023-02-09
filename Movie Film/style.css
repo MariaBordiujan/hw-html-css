@@ -1,0 +1,87 @@
+body {
+    /* Settings */
+    --size: 40vh;
+    --count: 7;
+    --top-marker: calc(var(--size) * 0.05 * 0.65);
+    --bottom-marker: calc(var(--size) * 0.955 * 0.65);
+
+    background-color: #222;
+}
+.movies {
+    width: var(--size);
+    height: var(--size);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.92) 30%,rgba(182, 0, 0, 0.92));
+    box-shadow: 0 0 15px 0 #000000;
+
+    margin-top: calc( (100vh - var(--size)) / 2);
+    margin-left: calc( 100vw / 3 - var(--size) / 2 );
+
+    border-radius: 100%;
+}
+.movies .film {
+    /* overflow: hidden; */
+    height: calc(var(--size) * 0.65);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 100vw;
+    margin-left: calc( -1 * (100vw / 3 - var(--size) / 2 ));
+
+    width: calc(var(--count) * var(--size) * 0.9 * 0.65 * 4/3 + (0.7vw * var(--count)));
+
+    background-image:
+     linear-gradient(transparent,transparent var(--top-marker), black var(--top-marker), black var(--bottom-marker), transparent var(--bottom-marker)),
+     radial-gradient(transparent 50%,black 50%),
+     radial-gradient(transparent 50%, black 50%);
+
+    background-size:
+     cover,
+     var(--top-marker) var(--top-marker),
+     var(--top-marker) var(--top-marker);
+    
+    background-repeat:
+     repeat,
+     repeat-x,
+     repeat-x;
+
+    background-position:
+     top left,
+     top left,
+     bottom left;
+
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.381));
+}
+.movies .film img {
+    /* display: none; */
+    position: relative;
+    top: calc(var(--size) * 0.05 * 0.65);
+    height: calc(var(--size) * 0.65 * 0.9);
+    margin-left: 0.7vw;
+}
+.movies .controls {
+    background-image: radial-gradient(rgba(182, 0, 0, 0.92),rgba(0, 0, 0, 0.92));
+    box-shadow: 0 0 15px 0 #0000009a;
+    position: absolute;
+    height: calc(var(--size) * 0.8);
+    width:  calc(var(--size) * 0.8);
+
+    margin-left: calc(var(--size) * 0.1);
+    margin-top: calc(var(--size) * 0.1);
+    
+    border-radius: 100%;
+    cursor: pointer;
+}
+.movies .controls button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 4vw;
+    cursor: pointer;
+
+    position: relative;
+    left: calc( (var(--size) * 0.8) / 3 );
+    top: calc( (var(--size) * 0.8) / 3 );
+}
