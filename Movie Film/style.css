@@ -10,7 +10,7 @@ body {
 .movies {
     width: var(--size);
     height: var(--size);
-    background-image: radial-gradient(rgba(0, 0, 0, 0.92) 30%,rgba(182, 0, 0, 0.92));
+    background-image: radial-gradient(rgba(24, 24, 24, 0.92) 20%,rgba(182, 0, 0, 0.92));
     box-shadow: 0 0 15px 0 #000000;
 
     margin-top: calc( (100vh - var(--size)) / 2);
@@ -62,8 +62,9 @@ body {
     margin-left: 0.7vw;
 }
 .movies .controls {
-    background-image: radial-gradient(rgba(182, 0, 0, 0.92),rgba(0, 0, 0, 0.92));
+    background-image: radial-gradient(rgba(182, 0, 0, 0.92),rgba(24, 24, 24, 0.92));
     box-shadow: 0 0 15px 0 #0000009a;
+    border: 1px solid rgba(0, 0, 0, 0.189);
     position: absolute;
     height: calc(var(--size) * 0.8);
     width:  calc(var(--size) * 0.8);
