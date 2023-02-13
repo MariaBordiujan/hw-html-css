@@ -1,7 +1,10 @@
 div {
-    margin-top: 1em;
+    padding: 0.2em;
 }
 .link {
+    display: block;
+    width: fit-content;
+    text-align: center;
     text-decoration: none;
     color: black;
     font-family: Arial;
@@ -13,7 +16,7 @@ div {
 
     font-size: 1.25em;
     padding: 0.25em 0.5em 0.25em 0.5em;
-    margin: 0.5em;
+    margin-bottom: 0.75em;
 
     border: 0.05em solid transparent;
     border-radius: 2em;
@@ -24,7 +27,7 @@ div {
 }
 .link:hover {
     opacity: 1;
-    transform: translateX(0.5em) translateY(0.5em);
+    transform: translateX(0.1em) translateY(0.1em);
 }
 .link::before {
     content: "";
