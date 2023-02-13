@@ -1,0 +1,104 @@
+body {
+    --main-color: #1515ae;
+    --success-color: rgb(4, 106, 4);
+    --light-color: #eee;
+
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-main {
+    visibility: hidden;
+    position: relative;
+    line-height: 1em;
+    top: 3em;
+    padding: 1em;
+}
+.nav-contacts {
+    position: absolute;
+    line-height: 1em;
+    top: 0;
+    border-bottom: 3px solid var(--main-color);
+    text-align: center;
+
+    box-sizing: border-box;
+    padding: 1em 1em;
+    width: 100%;
+    background-color: var(--main-color);
+}
+.nav-contacts a {
+    color: var(--light-color);
+    text-decoration: none;
+    display: inline-block;
+}
+.nav-contacts_email {
+    font-weight: 600;
+    float: left;
+}
+.nav-contacts_email i {
+    display: none;
+}
+.nav-contacts_phone {
+    font-weight: 900;
+
+    position: absolute;
+    top: calc(100vh - 5.5em);
+    left: 0;
+    right: 0;
+    padding: 1em;
+}
+.nav-contacts_phone i {
+    font-size: 2em;
+    margin-right: 0.75em;
+    background-color: var(--success-color);
+    padding: 0.5em;
+    border-radius: 100%;
+    color: var(--light-color);
+}
+.nav-contacts_phone span {
+    position: relative;
+    top: -0.35em;
+    color: var(--success-color);
+}
+.nav-contacts_socials {
+    float: right;
+}
+/* BREAKPOINT 360px */
+@media (max-width: 360px) {
+    .nav-contacts_email i {
+        display: inline;
+    }
+    .nav-contacts_email span {
+        display: none;
+    }
+}
+/* BREAKPOINT 1280px + HOVER */
+@media (min-width: 1280px), (hover:hover) {
+    .nav-contacts_phone {
+        position: relative;
+        top: 0;
+        padding: 0;
+    }
+    .nav-contacts_phone i {
+        color: var(--main-color);
+        background-color: var(--light-color);
+    }
+    .nav-contacts_phone span {
+        color: var(--light-color);
+    }
+    .nav-contacts_email,
+    .nav-contacts_socials {
+        margin-top: 1.5em;
+    }
+}
+/* BREAKPOINT 1366px */
+@media (min-width: 1366px) {
+    .nav-contacts {
+        padding: 1em 3em;
+    }
+}
+/* BREAKPOINT 1600px */
+@media (min-width: 1600px) {
+    .nav-contacts {
+        padding: 1em 5em;
+    }
+}
