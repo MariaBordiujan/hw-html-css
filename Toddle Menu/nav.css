@@ -54,6 +54,9 @@ body {
 
     animation: wave-effect 6s infinite;
 }
+#bottom-menu:target + .wave {
+    animation-play-state: paused;
+}
 @keyframes wave-effect {
     0% {
         scale: 0;
