@@ -1,0 +1,69 @@
+$darkColor: #222;
+$cols: 36;
+$rows: 24;
+$size: 33px;
+@mixin center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+body {
+    background-color: $darkColor;
+    color: lawngreen;
+}
+#carousel {
+    width: $cols * $size;
+    height: $rows * $size;
+    // border: $size * 0.05 solid lighten($darkColor, 10%);
+    @include center;
+
+    .slide {
+        display: grid;
+        grid-template-columns: repeat($cols, $size);
+        grid-template-rows: repeat($rows, $size);
+        width: inherit;
+        height: inherit;
+
+        // HW 1
+        div {
+            color: transparent;
+            text-align: center;
+            line-height: 100px;
+            vertical-align: center;
+        }
+
+        $offX: 0;
+        $offY: 0;
+        @for $n from 1 through $cols * $rows {
+
+            &>div:nth-child(#{$n}) {
+                background-image: url(images/pic-1.jpg);
+                background-position-x: $offX * - $size;
+                background-position-y: $offY * - $size;
+
+                animation: fadeOut 0.5s;
+                animation-delay: 0.3s * random(5);
+                animation-fill-mode: forwards;
+
+            }
+
+            $offX: $offX + 1;
+            @if $offX % $cols == 0 {
+                $offX: 0;
+                $offY: $offY + 1; 
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}
