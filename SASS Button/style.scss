@@ -1,0 +1,43 @@
+// 1. Variables
+$size: 200px;
+$colorDark: #333;
+$colorLight: MediumTurquoise;
+body {
+    background-color: $colorDark;
+}
+button {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+// 2. Arithmetics     
+    font-size: $size / 4;
+
+// 3. Specialized Functions 
+    background: 
+    linear-gradient(
+        darken($colorLight, 7%), 
+        lighten($colorLight, 50%), 
+        darken($colorLight, 7%));
+
+    border: $size * 0.03 solid darken($colorLight, 7%);
+    color: $colorDark;
+
+    box-shadow: 0 0 $size * 0.05 $size * 0.03 darken($colorDark, 10%);
+    text-shadow: $size * 0.005 $size * 0.005 1px darken($colorLight, 7%), $size * -0.005 $size * -0.005 $size * 0.01 lighten($colorLight, 50%);
+
+    cursor: pointer;
+
+// 4. Expending Rules
+    &:hover {
+        background: linear-gradient(lighten($colorLight, 50%), darken($colorLight, 7%), lighten($colorLight, 50%));
+        border: $size * 0.03 solid $colorLight;
+    }
+}

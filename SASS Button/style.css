@@ -1,0 +1,26 @@
+body {
+  background-color: #333;
+}
+
+button {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-size: 50px;
+  background: linear-gradient(#31c4bf, white, #31c4bf);
+  border: 6px solid #31c4bf;
+  color: #333;
+  box-shadow: 0 0 10px 6px #1a1a1a;
+  text-shadow: 1px 1px 1px #31c4bf, -1px -1px 2px white;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(white, #31c4bf, white);
+  border: 6px solid MediumTurquoise;
+}/*# sourceMappingURL=style.css.map */
