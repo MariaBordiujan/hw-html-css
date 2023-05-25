@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------------------------- */
+body {
+    background-color: #333;
+}
+.navbar {
+    display: grid;
+    grid-template: 1fr 2fr auto / repeat(12, 1fr);
+}
+.navbar .dropdown {
+    display: none;
+    grid-area: 3 / 2 / 3 / 12;
+}
+.navbar .options {
+    background-color: #555;
+    display: none;
+    grid-area: 3 / 11 / 3 / 12;
+    padding: 1%;
+    text-align: center;
+}
+.navbar .options:target {
+    display: block;
+}
+.navbar .options a {
+    color: white;
+    padding: 10%;
+    display: inline-block;
+}
+.navbar .dropdown:target {
+    display: block;
+}
+.navbar .nav {
+    background-color: #111;
+    grid-area: 2 / 2 / 2 / 12;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    padding: 1%;
+}
+.navbar .nav,
+.navbar .top {
+    align-items: center;
+}
+.navbar .nav a:not(:first-child),
+.navbar .top a:not(:first-child){
+    text-align: right;
+}
+.navbar .nav a {
+    color: white;
+}
+.navbar .top .hours {
+    text-align: right;
+}
+.navbar .top a,
+.navbar .top span {
+    color: #333;
+}
+.navbar .nav .brand {
+    grid-column: 1 / 5;
+}
+.navbar .nav .brand img {
+    width: 4em;
+    height: 75%;
+} 
+.navbar .top {
+    background-color: #ddd;
+    grid-area: 1 / 2 / 1 / 12;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    padding: 1%;
+}
+.navbar .top .hours {
+    grid-column: 2 / 10;
+}
