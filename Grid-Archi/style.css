@@ -1,0 +1,80 @@
+a {
+  text-decoration: none;
+  color: #49504c;
+}
+
+.grid__one-two {
+  display: grid;
+  grid-template-columns: 15% 1fr 2fr 15%;
+  grid-template-rows: 10% 1fr 1fr 10%;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.page__header {
+  color: white;
+}
+
+.header__wallpaper {
+  grid-column: 1/5;
+  grid-row: 1/5;
+  z-index: -1;
+}
+.header__wallpaper img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__navbar {
+  grid-column: 1/-1;
+  grid-row: 1;
+  padding: 1rem 15%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navbar ul {
+  display: flex;
+}
+.header__navbar ul a {
+  font-weight: 600;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+}
+.header__navbar ul a .material-symbols-outlined {
+  padding: 0.25em;
+  font-size: 1em;
+}
+.header__navbar .header__brand {
+  border: 2px solid #49504c;
+  padding: 0.65em 0.45em;
+}
+
+.header__heading--main {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 1rem;
+  align-self: end;
+  font-size: 2rem;
+  line-height: 1.15em;
+  text-shadow: rgba(100, 100, 111, 0.2) 3px 3px 2px;
+}
+
+.header__heading--second {
+  grid-column: 2;
+  grid-row: 3;
+  padding: 1rem;
+  align-self: start;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  text-shadow: rgba(100, 100, 111, 0.2) 3px 3px 2px;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */
