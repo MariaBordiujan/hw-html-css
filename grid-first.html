@@ -21,16 +21,19 @@
         /* GRID */
         #content {
             display: grid;
-            grid-template-columns: 10% 80% 10%;
-            grid-template-rows: 10% 80% 10%;
+            /* grid-template-columns: 10% 80% 10%;
+            grid-template-rows: 10% 80% 10%; */
+            grid-template: 10% 80% 10% / 10% 80% 10%;
         }
         #content form {
-            grid-row-start: 2;
-            grid-column-start: 2;
+            /* grid-row-start: 2;
+            grid-column-start: 2; */
+            grid-area: 2 / 2 ;
         }
         #content a {
-            grid-row-start: 3;
-            grid-column-start: 3;
+            /* grid-row-start: 3;
+            grid-column-start: 3; */
+            grid-area: 3 / 3;
         }
     </style>
 </head>
