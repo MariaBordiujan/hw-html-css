@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    --navbar-h: 3.15em;
+    --spacer: 1em;
+    font-family: sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+* {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.navbar {
+    background-color: #234;
+    color: white;
+    padding: var( --spacer);
+}
+.navbar,
+.sidebar,
+.dashboard {
+    padding: var( --spacer);
+}
+.row {
+    display: flex;
+    flex-grow: 100;
+}
+.sidebar {
+    background-color: #435;
+    color: white;
+    flex-shrink: 3;
+}
+.dashboard {
+    background-color: #222;
+    color: white;
+    flex-grow: 50;
+}
+
+/* DYNAMIC */
+#sidebar_link .ex {
+    display: none;
+}
+#sidebar_link:target .ex{
+    display: inline;
+}
